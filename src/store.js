@@ -1,22 +1,22 @@
 import React, {createContext, useReducer} from "react";
-import AuthReducer from "./reducers/auth";
-import SettingReducer from "./reducers/setting";
+import auth from "./reducers/auth";
+import setting from "./reducers/setting";
 
 const combineReducers = (slices) => (state, action) =>
     Object.keys(slices).reduce( // use for..in loop, if you prefer it
         // some issues to merge the state
         (acc, prop) => ({
             ...acc,
-            [prop]: slices[prop](acc[prop], action.payload),
+            [prop]: slices[prop](acc[prop], action),
         }),
         state
     );
-const initialState = {
-    auth: AuthReducer.initialState,
-    setting: SettingReducer.initialState,
-    }; // some state for props a, b
-const rootReducer = combineReducers({AuthReducer, SettingReducer});
 
+const initialState = {
+    auth: auth.initialState,
+    setting: setting.initialState,
+    }; // some state for props a, b
+const rootReducer = combineReducers({auth, setting});
 
 const Store = ({children}) => {
     const [state, dispatch] = useReducer(rootReducer, initialState);

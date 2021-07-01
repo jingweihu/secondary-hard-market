@@ -27,20 +27,15 @@ const Login = () => {
     const handleSubmit = e => {
         e.preventDefault();
         let value = {
-            currentUser: {
-                username: 'tim',
-                image: ''
-            },
-            error: null
+            username: 'tim',
+            image: ''
         }
         /* fetch api */
 
         /* clear state */
-        console.log('test');
-        dispatch({type: LOGIN, payload: value});
+        dispatch({type: LOGIN, value: value, key: 'currentUser'});
         history.push('/')
     };
-
 
     return (
         <div className="auth-page">

@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './ui/App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Home from "./ui/home/Home";
 import Store from "./store";
 
 ReactDOM.render(

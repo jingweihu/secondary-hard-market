@@ -1,21 +1,21 @@
 import {LOGIN} from "../constants/reducerConstants";
 
-const AuthReducer = (state, action) => {
+const auth = (state, action) => {
     switch (action.type) {
         case LOGIN:
         let value = {
             ...state,
-            auth: action.payload
-        };
-        console.log(value);
-
+            [action.key]: action.value
+        }
         return value;
+        default:
+            return state;
     }
 };
 
-AuthReducer.initialState = {
+auth.initialState = {
     currentUser: null,
     error: null
 }
 
-export default AuthReducer;
+export default auth;
