@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Tutorial
+[Example Realworld](https://github.com/gothinkster/react-redux-realworld-example-app)
+
+[State Management]([https://codeburst.io/global-state-with-react-hooks-and-context-api-87019cc4f2cf)
+[State Management2]([https://stackoverflow.com/questions/59200785/react-usereducer-how-to-combine-multiple-reducers])
+
+[Login Example](https://rangle.io/blog/simplifying-controlled-inputs-with-hooks/)
